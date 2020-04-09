@@ -10,11 +10,12 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
+    chunkFilename: '[name].js',
     library: 'RealNameMobile',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },
-  mode: 'none',
+  mode: 'production',
   optimization: {
     minimize: true,
     minimizer: [
