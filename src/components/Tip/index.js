@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import './index.less';
 
-const Tip = ({ className, title, subTitle, subTitle2, content }) => {
+const Tip = ({ className, title, subTitle, subTitle2, content, onClose }) => {
   const componentClassName = classnames('tip', className);
 
   return (
@@ -17,6 +17,7 @@ const Tip = ({ className, title, subTitle, subTitle2, content }) => {
           <p>{content}</p>
         </main>
       </div>
+      <i onClick={onClose} className='tip__close' />
     </div>
   );
 }

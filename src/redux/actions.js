@@ -1,0 +1,1 @@
+export { updateGlobalData } from './action-reducer/updateGlobalData';
