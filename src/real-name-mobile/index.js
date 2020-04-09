@@ -6,6 +6,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Modal } from 'components';
+import App from './app';
 
 import './index.less';
 
@@ -32,7 +33,8 @@ export default class RealNameMobile {
   }
 
   show() {
-    renderApp(Test);
+    // renderApp(Test);
+    renderApp(App);
   }
 }
 
@@ -45,4 +47,11 @@ const renderApp = Component => {
     </AppContainer>, 
     document.getElementById('real-name-mobile')
   );
+}
+
+if (module.hot) {
+  module.hot.accept('./app', () => {
+    const App = require('./app').default;
+    renderApp(App);
+  });
 }

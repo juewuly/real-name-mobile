@@ -18,7 +18,6 @@ class Modal extends React.Component {
   }
 
   componentDidMount() {
-    console.log('didmount', document.getElementById('real-name-mobile-modal'));
     this.modalRoot.appendChild(this.mask);
     this.modalRoot.appendChild(this.wrap);
   }
