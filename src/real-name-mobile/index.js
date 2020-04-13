@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import configStore from 'src/common/configStore';
 import App from './app';
-import { UPDATE_POPUP_DATA } from 'src/redux/constants';
+import { UPDATE_POPUP_DATA, SET_POPUP_DATA } from 'src/redux/constants';
 import Config from './config';
 
 const store = configStore();
@@ -53,7 +53,7 @@ export default class RealNameMobile {
    */
   showEight() {
     const { title, subTitle, content } = Config.pay.ageLessThanEight;
-    updatePopupData({
+    setPopupData({
       show: true,
       title,
       subTitle,
@@ -66,7 +66,7 @@ export default class RealNameMobile {
    */
   showSixteen() {
     const { title, subTitle, content } = Config.pay.ageLessThanSixteen;
-    updatePopupData({
+    setPopupData({
       show: true,
       title,
       subTitle,
@@ -80,7 +80,7 @@ export default class RealNameMobile {
    */
   showSixteenCharge(amount) {
     const { title, subTitle, content } = Config.pay.ageLessThanSixteenCharge;
-    updatePopupData({
+    setPopupData({
       show: true,
       title,
       subTitle,
@@ -94,7 +94,7 @@ export default class RealNameMobile {
    */
   showEighteen() {
     const { title, subTitle, content } = Config.pay.ageLessThanEighteen;
-    updatePopupData({
+    setPopupData({
       show: true,
       title,
       subTitle,
@@ -108,12 +108,40 @@ export default class RealNameMobile {
    */
   showEighteenCharge(amount) {
     const { title, subTitle, content } = Config.pay.ageLessThanEighteenCharge;
-    updatePopupData({
+    setPopupData({
       show: true,
       title,
       subTitle,
-      subTitle2: `该游戏本月还可充值${amount}元`
+      subTitle2: `该游戏本月还可充值${amount}元`,
+      content
     });
+  }
+
+  /**
+   * 登录后游戏时长已达到上限时的提示
+   */
+  showTimeLimitAfterLogin() {
+    const { title, content } = Config.login.gameTimeLimit;
+    setPopupData({
+      show: true,
+      title,
+      content,
+      canClose: false
+    });
+  }
+
+  /**
+   * 游戏中时长已达到上限时的提示
+   */
+  showTimeLimitWhenPlaying() {
+    const { title, subTitle, content } = Config.playing.gameTimeLimit;
+    setPopupData({
+      show: true,
+      title,
+      subTitle,
+      content,
+      canClose: false
+    })
   }
 
   close() {
@@ -129,6 +157,13 @@ export default class RealNameMobile {
 const updatePopupData = data => {
   store.dispatch({
     type: UPDATE_POPUP_DATA,
+    data
+  });
+}
+
+const setPopupData = data => {
+  store.dispatch({
+    type: SET_POPUP_DATA,
     data
   });
 }

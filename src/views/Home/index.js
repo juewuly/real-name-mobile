@@ -25,7 +25,7 @@ class Home extends Component {
   }
 
   render() {
-    const { show, title, subTitle, subTitle2, content } = this.props;
+    const { show, title, subTitle, subTitle2, content, canClose } = this.props;
 
     if (!show) {
       return null;
@@ -38,7 +38,8 @@ class Home extends Component {
           subTitle={subTitle}
           subTitle2={subTitle2}
           content={content}
-          onClose={this.handleClose}/>
+          canClose={canClose}
+          onClose={this.handleClose} />
       </Modal>
     );
   }
@@ -50,6 +51,7 @@ const mapStateToProps = state => ({
   subTitle: state.getIn(['data', 'popup', 'subTitle']),
   subTitle2: state.getIn(['data', 'popup', 'subTitle2']),
   content: state.getIn(['data', 'popup', 'content']),
+  canClose: state.getIn(['data', 'popup', 'canClose'])
 });
 
 const mapDispatchToProps = dispatch => ({

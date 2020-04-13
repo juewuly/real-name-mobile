@@ -304,7 +304,7 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(4);
+var react_dom = __webpack_require__(5);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/lib/index.js
@@ -356,7 +356,9 @@ var initialState_initialState = immutable_default.a.fromJS({
 // 更新全局数据
 var UPDATE_GLOBAL_DATA = 'UPDATE_GLOBAL_DATA'; // 更新弹窗数据
 
-var UPDATE_POPUP_DATA = 'UPDATE_POPUP_DATA';
+var UPDATE_POPUP_DATA = 'UPDATE_POPUP_DATA'; // 设置弹窗数据
+
+var SET_POPUP_DATA = 'SET_POPUP_DATA';
 // CONCATENATED MODULE: ./src/redux/action-reducer/updateGlobalData.js
 
 
@@ -399,11 +401,33 @@ var updatePopupData_reducer = function reducer(state, action) {
       return state;
   }
 };
+// CONCATENATED MODULE: ./src/redux/action-reducer/setPopupData.js
+
+
+var setPopupData_KEY = 'popup';
+var setPopupData_setPopupData = function setPopupData(data) {
+  return function (dispatch) {
+    return dispatch({
+      type: SET_POPUP_DATA,
+      data: data
+    });
+  };
+};
+var setPopupData_reducer = function reducer(state, action) {
+  switch (action.type) {
+    case SET_POPUP_DATA:
+      return state.setIn([setPopupData_KEY], Object(immutable["fromJS"])(action.data));
+
+    default:
+      return state;
+  }
+};
 // CONCATENATED MODULE: ./src/redux/reducer.js
 
 
 
-var allReducers = [updateGlobalData_reducer, updatePopupData_reducer];
+
+var allReducers = [updateGlobalData_reducer, updatePopupData_reducer, setPopupData_reducer];
 function reducer_reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : redux_initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -455,7 +479,7 @@ function configureStore(initialState) {
 var root = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(5);
+var prop_types = __webpack_require__(4);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ./src/components/Modal/index.less
@@ -556,12 +580,14 @@ var components_Tip = __webpack_require__(22);
 
 
 
+
 var Tip_Tip = function Tip(_ref) {
   var className = _ref.className,
       title = _ref.title,
       subTitle = _ref.subTitle,
       subTitle2 = _ref.subTitle2,
       content = _ref.content,
+      canClose = _ref.canClose,
       onClose = _ref.onClose;
   var componentClassName = classnames_default()('tip', className);
   return /*#__PURE__*/react_default.a.createElement("div", {
@@ -574,17 +600,22 @@ var Tip_Tip = function Tip(_ref) {
     className: "tip__title"
   }, subTitle2), /*#__PURE__*/react_default.a.createElement("main", {
     className: "tip__content"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, content))), /*#__PURE__*/react_default.a.createElement("i", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, content))), canClose && /*#__PURE__*/react_default.a.createElement("i", {
     onClick: onClose,
     className: "tip__close"
   }));
 };
 
+Tip_Tip.propTypes = {};
+Tip_Tip.defaultProps = {
+  canClose: true
+};
 /* harmony default export */ var src_components_Tip = (Tip_Tip);
 // CONCATENATED MODULE: ./src/components/index.js
 
 
 // CONCATENATED MODULE: ./src/redux/actions.js
+
 
 
 // EXTERNAL MODULE: ./src/views/Home/index.less
@@ -656,7 +687,8 @@ var Home_Home = /*#__PURE__*/function (_Component) {
           title = _this$props.title,
           subTitle = _this$props.subTitle,
           subTitle2 = _this$props.subTitle2,
-          content = _this$props.content;
+          content = _this$props.content,
+          canClose = _this$props.canClose;
 
       if (!show) {
         return null;
@@ -667,6 +699,7 @@ var Home_Home = /*#__PURE__*/function (_Component) {
         subTitle: subTitle,
         subTitle2: subTitle2,
         content: content,
+        canClose: canClose,
         onClose: this.handleClose
       }));
     }
@@ -681,7 +714,8 @@ var mapStateToProps = function mapStateToProps(state) {
     title: state.getIn(['data', 'popup', 'title']),
     subTitle: state.getIn(['data', 'popup', 'subTitle']),
     subTitle2: state.getIn(['data', 'popup', 'subTitle2']),
-    content: state.getIn(['data', 'popup', 'content'])
+    content: state.getIn(['data', 'popup', 'content']),
+    canClose: state.getIn(['data', 'popup', 'canClose'])
   };
 };
 
@@ -751,12 +785,12 @@ var Config = {
   login: {
     // 登录后时长已达到上限的提示
     gameTimeLimit: {
-      title: '您今日在该游戏时长已达到上限',
+      title: '您今日在该游戏时长已经达到上限',
       content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u672A\u6210\u5E74\u7528\u6237\u6CD5\u5B9A\u8282\u5047\u65E5\u6BCF\u65E5\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC73\u5C0F\u65F6\uFF0C\u5176\u5B83\u65F6\u95F4\u6BCF\u65E5\u4E0D\u5F97\u8D85\u8FC71.5\u5C0F\u65F6\u3002")
     }
   },
   // 游戏中相关提示信息的配置
-  play: {
+  playing: {
     // 游戏中时长已达到上限的提示
     gameTimeLimit: {
       title: '您今日在该游戏时长已达到上限',
@@ -826,7 +860,7 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
           title = _Config$pay$ageLessTh.title,
           subTitle = _Config$pay$ageLessTh.subTitle,
           content = _Config$pay$ageLessTh.content;
-      real_name_mobile_updatePopupData({
+      real_name_mobile_setPopupData({
         show: true,
         title: title,
         subTitle: subTitle,
@@ -844,7 +878,7 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
           title = _Config$pay$ageLessTh2.title,
           subTitle = _Config$pay$ageLessTh2.subTitle,
           content = _Config$pay$ageLessTh2.content;
-      real_name_mobile_updatePopupData({
+      real_name_mobile_setPopupData({
         show: true,
         title: title,
         subTitle: subTitle,
@@ -863,7 +897,7 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
           title = _Config$pay$ageLessTh3.title,
           subTitle = _Config$pay$ageLessTh3.subTitle,
           content = _Config$pay$ageLessTh3.content;
-      real_name_mobile_updatePopupData({
+      real_name_mobile_setPopupData({
         show: true,
         title: title,
         subTitle: subTitle,
@@ -882,7 +916,7 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
           title = _Config$pay$ageLessTh4.title,
           subTitle = _Config$pay$ageLessTh4.subTitle,
           content = _Config$pay$ageLessTh4.content;
-      real_name_mobile_updatePopupData({
+      real_name_mobile_setPopupData({
         show: true,
         title: title,
         subTitle: subTitle,
@@ -901,11 +935,48 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
           title = _Config$pay$ageLessTh5.title,
           subTitle = _Config$pay$ageLessTh5.subTitle,
           content = _Config$pay$ageLessTh5.content;
-      real_name_mobile_updatePopupData({
+      real_name_mobile_setPopupData({
         show: true,
         title: title,
         subTitle: subTitle,
-        subTitle2: "\u8BE5\u6E38\u620F\u672C\u6708\u8FD8\u53EF\u5145\u503C".concat(amount, "\u5143")
+        subTitle2: "\u8BE5\u6E38\u620F\u672C\u6708\u8FD8\u53EF\u5145\u503C".concat(amount, "\u5143"),
+        content: content
+      });
+    }
+    /**
+     * 登录后游戏时长已达到上限时的提示
+     */
+
+  }, {
+    key: "showTimeLimitAfterLogin",
+    value: function showTimeLimitAfterLogin() {
+      var _Config$login$gameTim = config.login.gameTimeLimit,
+          title = _Config$login$gameTim.title,
+          content = _Config$login$gameTim.content;
+      real_name_mobile_setPopupData({
+        show: true,
+        title: title,
+        content: content,
+        canClose: false
+      });
+    }
+    /**
+     * 游戏中时长已达到上限时的提示
+     */
+
+  }, {
+    key: "showTimeLimitWhenPlaying",
+    value: function showTimeLimitWhenPlaying() {
+      var _Config$playing$gameT = config.playing.gameTimeLimit,
+          title = _Config$playing$gameT.title,
+          subTitle = _Config$playing$gameT.subTitle,
+          content = _Config$playing$gameT.content;
+      real_name_mobile_setPopupData({
+        show: true,
+        title: title,
+        subTitle: subTitle,
+        content: content,
+        canClose: false
       });
     }
   }, {
@@ -937,6 +1008,13 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
 var real_name_mobile_updatePopupData = function updatePopupData(data) {
   real_name_mobile_store.dispatch({
     type: UPDATE_POPUP_DATA,
+    data: data
+  });
+};
+
+var real_name_mobile_setPopupData = function setPopupData(data) {
+  real_name_mobile_store.dispatch({
+    type: SET_POPUP_DATA,
     data: data
   });
 };

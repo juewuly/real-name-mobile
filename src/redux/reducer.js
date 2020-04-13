@@ -2,10 +2,12 @@ import initialState from './initialState';
 
 import { reducer as updateGlobalData } from './action-reducer/updateGlobalData';
 import { reducer as updatePopupData } from './action-reducer/updatePopupData';
+import { reducer as setPopupData } from './action-reducer/setPopupData';
 
 const allReducers = [
   updateGlobalData,
-  updatePopupData
+  updatePopupData,
+  setPopupData
 ];
 
 export default function reducer(state=initialState, action) {

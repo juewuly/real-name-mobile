@@ -50,13 +50,13 @@ const Config = {
   login: {
     // 登录后时长已达到上限的提示
     gameTimeLimit: {
-      title: '您今日在该游戏时长已达到上限',
+      title: '您今日在该游戏时长已经达到上限',
       content: `根据${NoticeName}，未成年用户法定节假日每日累计不得超过3小时，其它时间每日不得超过1.5小时。`,
-    },
+    }
   },
 
   // 游戏中相关提示信息的配置
-  play: {
+  playing: {
     // 游戏中时长已达到上限的提示
     gameTimeLimit: {
       title: '您今日在该游戏时长已达到上限',
