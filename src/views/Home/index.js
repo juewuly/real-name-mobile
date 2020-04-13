@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Modal, Tip } from 'components';
 
-import { updateGlobalData } from 'src/redux/actions';
+import { updatePopupData } from 'src/redux/actions';
 
 import './index.less';
 
@@ -19,13 +19,13 @@ class Home extends Component {
 
   handleClose = () => {
     const { actions } = this.props;
-    actions.updateGlobalData({
+    actions.updatePopupData({
       show: false
     });
   }
 
   render() {
-    const { show } = this.props;
+    const { show, title, subTitle, subTitle2, content } = this.props;
 
     if (!show) {
       return null;
@@ -34,10 +34,10 @@ class Home extends Component {
     return (
       <Modal>
         <Tip
-          title='根据相关部门对于未成年用户监管要求'
-          subTitle='该账号不能充值游戏'
-          subTitle2=''
-          content='根据《关于防止未成年人沉迷网络游戏的通知》，网络游戏企业不得为未满8周岁以下用户提供游戏付费服务。'
+          title={title}
+          subTitle={subTitle}
+          subTitle2={subTitle2}
+          content={content}
           onClose={this.handleClose}/>
       </Modal>
     );
@@ -45,12 +45,16 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  show: state.getIn(['data', 'global', 'show'])
+  show: state.getIn(['data', 'popup', 'show']),
+  title: state.getIn(['data', 'popup', 'title']),
+  subTitle: state.getIn(['data', 'popup', 'subTitle']),
+  subTitle2: state.getIn(['data', 'popup', 'subTitle2']),
+  content: state.getIn(['data', 'popup', 'content']),
 });
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators({
-    updateGlobalData
+    updatePopupData
   }, dispatch)
 });
 

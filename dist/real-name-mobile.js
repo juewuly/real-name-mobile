@@ -159,7 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([28,0]);
+/******/ 	deferredModules.push([26,0]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -169,7 +169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(6);
+var api = __webpack_require__(9);
             var content = __webpack_require__(21);
 
             content = content.__esModule ? content.default : content;
@@ -197,7 +197,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(7);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, ".modal-mask {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  z-index: 9000;\n  background: rgba(0, 0, 0, 0.5);\n}\n.modal-mask.no-mask {\n  background: rgba(0, 0, 0, 0);\n}\n.modal-wrap {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  z-index: 9999;\n}\n", ""]);
@@ -210,7 +210,7 @@ module.exports = exports;
 /***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(6);
+var api = __webpack_require__(9);
             var content = __webpack_require__(23);
 
             content = content.__esModule ? content.default : content;
@@ -238,10 +238,10 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(7);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".tip {\n  box-sizing: border-box;\n  position: relative;\n  width: 88vw;\n  height: 80vw;\n  background-color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding-left: 4vw;\n  padding-right: 4vw;\n}\n.tip__title {\n  font-size: 4vw;\n  margin-top: 1.33333333vw;\n  margin-bottom: 1.33333333vw;\n}\n.tip__content {\n  margin-top: 13.33333333vw;\n  font-size: 3.33333333vw;\n  text-align: left;\n}\n.tip__close {\n  position: absolute;\n  cursor: pointer;\n  bottom: -8vw;\n  width: 4.8vw;\n  height: 4.8vw;\n  background: url('https://p4.ssl.qhimg.com/t013d31002fab72ccdc.png') center center no-repeat;\n  background-size: contain;\n}\n", ""]);
+exports.push([module.i, ".tip {\n  box-sizing: border-box;\n  position: relative;\n  width: 88vw;\n  height: 80vw;\n  background-color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding-left: 4vw;\n  padding-right: 4vw;\n}\n.tip__title {\n  font-size: 4vw;\n  margin-top: 1.33333333vw;\n  margin-bottom: 1.33333333vw;\n  font-weight: bold;\n}\n.tip__content {\n  margin-top: 13.33333333vw;\n  font-size: 3.33333333vw;\n  text-align: left;\n}\n.tip__close {\n  position: absolute;\n  cursor: pointer;\n  bottom: -8vw;\n  width: 4.8vw;\n  height: 4.8vw;\n  background: url('https://p4.ssl.qhimg.com/t013d31002fab72ccdc.png') center center no-repeat;\n  background-size: contain;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -251,7 +251,7 @@ module.exports = exports;
 /***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(6);
+var api = __webpack_require__(9);
             var content = __webpack_require__(25);
 
             content = content.__esModule ? content.default : content;
@@ -279,7 +279,7 @@ module.exports = exported;
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(7);
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "", ""]);
@@ -290,47 +290,6 @@ module.exports = exports;
 /***/ }),
 
 /***/ 26:
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(6);
-            var content = __webpack_require__(27);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ 27:
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(7);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -349,16 +308,16 @@ var react_dom = __webpack_require__(4);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/lib/index.js
-var lib = __webpack_require__(8);
+var lib = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/react-hot-loader/index.js
 var react_hot_loader = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/redux/lib/redux.js
-var redux = __webpack_require__(1);
+var redux = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/react-router-redux/lib/index.js
-var react_router_redux_lib = __webpack_require__(9);
+var react_router_redux_lib = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/redux-thunk/lib/index.js
 var redux_thunk_lib = __webpack_require__(11);
@@ -375,7 +334,7 @@ var history_history = Object(node_modules_history["createBrowserHistory"])();
 var dist = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/immutable/dist/immutable.js
-var immutable = __webpack_require__(3);
+var immutable = __webpack_require__(1);
 var immutable_default = /*#__PURE__*/__webpack_require__.n(immutable);
 
 // CONCATENATED MODULE: ./src/redux/initialState.js
@@ -383,16 +342,25 @@ var immutable_default = /*#__PURE__*/__webpack_require__.n(immutable);
 var initialState_initialState = immutable_default.a.fromJS({
   global: {
     show: false
+  },
+  popup: {
+    // 是否显示弹窗
+    show: false,
+    title: '',
+    subTitle: '',
+    content: ''
   }
 });
 /* harmony default export */ var redux_initialState = (initialState_initialState);
 // CONCATENATED MODULE: ./src/redux/constants.js
-// 更新当前数据
-var UPDATE_GLOBAL_DATA = 'UPDATE_GLOBAL_DATA';
+// 更新全局数据
+var UPDATE_GLOBAL_DATA = 'UPDATE_GLOBAL_DATA'; // 更新弹窗数据
+
+var UPDATE_POPUP_DATA = 'UPDATE_POPUP_DATA';
 // CONCATENATED MODULE: ./src/redux/action-reducer/updateGlobalData.js
 
 
-var INDEX = 'global';
+var KEY = 'global';
 var updateGlobalData_updateGlobalData = function updateGlobalData(data) {
   return function (dispatch) {
     return dispatch({
@@ -404,7 +372,28 @@ var updateGlobalData_updateGlobalData = function updateGlobalData(data) {
 var updateGlobalData_reducer = function reducer(state, action) {
   switch (action.type) {
     case UPDATE_GLOBAL_DATA:
-      return state.mergeIn([INDEX], Object(immutable["fromJS"])(action.data));
+      return state.mergeIn([KEY], Object(immutable["fromJS"])(action.data));
+
+    default:
+      return state;
+  }
+};
+// CONCATENATED MODULE: ./src/redux/action-reducer/updatePopupData.js
+
+
+var updatePopupData_KEY = 'popup';
+var updatePopupData_updatePopupData = function updatePopupData(data) {
+  return function (dispatch) {
+    return dispatch({
+      type: UPDATE_POPUP_DATA,
+      data: data
+    });
+  };
+};
+var updatePopupData_reducer = function reducer(state, action) {
+  switch (action.type) {
+    case UPDATE_POPUP_DATA:
+      return state.mergeIn([updatePopupData_KEY], Object(immutable["fromJS"])(action.data));
 
     default:
       return state;
@@ -413,7 +402,8 @@ var updateGlobalData_reducer = function reducer(state, action) {
 // CONCATENATED MODULE: ./src/redux/reducer.js
 
 
-var allReducers = [updateGlobalData_reducer];
+
+var allReducers = [updateGlobalData_reducer, updatePopupData_reducer];
 function reducer_reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : redux_initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -461,6 +451,9 @@ function configureStore(initialState) {
 
   return store;
 }
+// EXTERNAL MODULE: ./node_modules/react-hot-loader/root.js
+var root = __webpack_require__(15);
+
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
 var prop_types = __webpack_require__(5);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
@@ -591,10 +584,8 @@ var Tip_Tip = function Tip(_ref) {
 // CONCATENATED MODULE: ./src/components/index.js
 
 
-// EXTERNAL MODULE: ./node_modules/react-hot-loader/root.js
-var root = __webpack_require__(15);
-
 // CONCATENATED MODULE: ./src/redux/actions.js
+
 
 // EXTERNAL MODULE: ./src/views/Home/index.less
 var views_Home = __webpack_require__(24);
@@ -646,7 +637,7 @@ var Home_Home = /*#__PURE__*/function (_Component) {
 
     _defineProperty(Home_assertThisInitialized(_this), "handleClose", function () {
       var actions = _this.props.actions;
-      actions.updateGlobalData({
+      actions.updatePopupData({
         show: false
       });
     });
@@ -660,17 +651,22 @@ var Home_Home = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var show = this.props.show;
+      var _this$props = this.props,
+          show = _this$props.show,
+          title = _this$props.title,
+          subTitle = _this$props.subTitle,
+          subTitle2 = _this$props.subTitle2,
+          content = _this$props.content;
 
       if (!show) {
         return null;
       }
 
       return /*#__PURE__*/react_default.a.createElement(src_components_Modal, null, /*#__PURE__*/react_default.a.createElement(src_components_Tip, {
-        title: "\u6839\u636E\u76F8\u5173\u90E8\u95E8\u5BF9\u4E8E\u672A\u6210\u5E74\u7528\u6237\u76D1\u7BA1\u8981\u6C42",
-        subTitle: "\u8BE5\u8D26\u53F7\u4E0D\u80FD\u5145\u503C\u6E38\u620F",
-        subTitle2: "",
-        content: "\u6839\u636E\u300A\u5173\u4E8E\u9632\u6B62\u672A\u6210\u5E74\u4EBA\u6C89\u8FF7\u7F51\u7EDC\u6E38\u620F\u7684\u901A\u77E5\u300B\uFF0C\u7F51\u7EDC\u6E38\u620F\u4F01\u4E1A\u4E0D\u5F97\u4E3A\u672A\u6EE18\u5468\u5C81\u4EE5\u4E0B\u7528\u6237\u63D0\u4F9B\u6E38\u620F\u4ED8\u8D39\u670D\u52A1\u3002",
+        title: title,
+        subTitle: subTitle,
+        subTitle2: subTitle2,
+        content: content,
         onClose: this.handleClose
       }));
     }
@@ -681,14 +677,18 @@ var Home_Home = /*#__PURE__*/function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    show: state.getIn(['data', 'global', 'show'])
+    show: state.getIn(['data', 'popup', 'show']),
+    title: state.getIn(['data', 'popup', 'title']),
+    subTitle: state.getIn(['data', 'popup', 'subTitle']),
+    subTitle2: state.getIn(['data', 'popup', 'subTitle2']),
+    content: state.getIn(['data', 'popup', 'content'])
   };
 };
 
 var Home_mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     actions: Object(redux["bindActionCreators"])({
-      updateGlobalData: updateGlobalData_updateGlobalData
+      updatePopupData: updatePopupData_updatePopupData
     }, dispatch)
   };
 };
@@ -706,17 +706,72 @@ var app_App = function App() {
 };
 
 /* harmony default export */ var app = (Object(root["hot"])(app_App));
-// EXTERNAL MODULE: ./src/real-name-mobile/index.less
-var real_name_mobile = __webpack_require__(26);
-
+// CONCATENATED MODULE: ./src/real-name-mobile/config.js
+/**
+ * author: liuyang9
+ * description: 提示信息的相关配置
+ */
+// 通知名称
+var NoticeName = '《关于防止未成年人沉迷网络游戏的通知》';
+var Config = {
+  // 支付相关提示信息的配置
+  pay: {
+    // 年龄小于8周岁的提示
+    ageLessThanEight: {
+      title: '根据相关部门对于未成年用户监管要求',
+      subTitle: '该帐号不能充值游戏',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u7F51\u7EDC\u6E38\u620F\u4F01\u4E1A\u4E0D\u5F97\u4E3A\u672A\u6EE18\u5468\u5C81\u4EE5\u4E0B\u7528\u6237\u63D0\u4F9B\u6E38\u620F\u4ED8\u8D39\u670D\u52A1\u3002")
+    },
+    // 8-16周岁充值金额达到上限的提示
+    ageLessThanSixteen: {
+      title: '该游戏本月累计充值金额已达到上限',
+      subTitle: '每个游戏每月累计充值不能超过200元',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C8~16\u5468\u5C81\u7528\u6237\u5355\u6B21\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC750\u5143\u4EBA\u6C11\u5E01\uFF0C\u6BCF\u6B3E\u6E38\u620F\u6BCF\u6708\u7D2F\u8BA1\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7200\u5143\u4EBA\u6C11\u5E01\u3002")
+    },
+    // 8-16周岁可充值，但充值金额达到上限的提示
+    ageLessThanSixteenCharge: {
+      title: '本次充值金额超过单笔上限',
+      subTitle: '请重新选择充值金额',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C8~16\u5468\u5C81\u7528\u6237\u5355\u6B21\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC750\u5143\u4EBA\u6C11\u5E01\uFF0C\u6BCF\u6B3E\u6E38\u620F\u6BCF\u6708\u7D2F\u8BA1\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7200\u5143\u4EBA\u6C11\u5E01\u3002")
+    },
+    // 16-18周岁充值金额达到上限的提示
+    ageLessThanEighteen: {
+      title: '该游戏本月累计充值金额已达到上限',
+      subTitle: '每个游戏每月累计充值不能超过400元',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C16~18\u5468\u5C81\u7528\u6237\u5355\u6B21\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7100\u5143\u4EBA\u6C11\u5E01\uFF0C\u6BCF\u6B3E\u6E38\u620F\u6BCF\u6708\u7D2F\u8BA1\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7400\u5143\u4EBA\u6C11\u5E01\u3002")
+    },
+    // 16-18周岁可充值，但充值金额达到上限的提示
+    ageLessThanEighteenCharge: {
+      title: '本次充值金额超过单笔上限',
+      subTitle: '请重新选择充值金额',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C16~18\u5468\u5C81\u7528\u6237\u5355\u6B21\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7100\u5143\u4EBA\u6C11\u5E01\uFF0C\u6BCF\u6B3E\u6E38\u620F\u6BCF\u6708\u7D2F\u8BA1\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7400\u5143\u4EBA\u6C11\u5E01\u3002")
+    }
+  },
+  // 登录后相关提示信息的配置
+  login: {
+    // 登录后时长已达到上限的提示
+    gameTimeLimit: {
+      title: '您今日在该游戏时长已达到上限',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u672A\u6210\u5E74\u7528\u6237\u6CD5\u5B9A\u8282\u5047\u65E5\u6BCF\u65E5\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC73\u5C0F\u65F6\uFF0C\u5176\u5B83\u65F6\u95F4\u6BCF\u65E5\u4E0D\u5F97\u8D85\u8FC71.5\u5C0F\u65F6\u3002")
+    }
+  },
+  // 游戏中相关提示信息的配置
+  play: {
+    // 游戏中时长已达到上限的提示
+    gameTimeLimit: {
+      title: '您今日在该游戏时长已达到上限',
+      subTitle: '30秒后将返回登录页',
+      content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u672A\u6210\u5E74\u7528\u6237\u6CD5\u5B9A\u8282\u5047\u65E5\u6BCF\u65E5\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC73\u5C0F\u65F6\uFF0C\u5176\u5B83\u65F6\u95F4\u6BCF\u65E5\u4E0D\u5F97\u8D85\u8FC71.5\u5C0F\u65F6\u3002")
+    }
+  }
+};
+/* harmony default export */ var config = (Config);
 // CONCATENATED MODULE: ./src/real-name-mobile/index.js
 function real_name_mobile_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function real_name_mobile_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function real_name_mobile_createClass(Constructor, protoProps, staticProps) { if (protoProps) real_name_mobile_defineProperties(Constructor.prototype, protoProps); if (staticProps) real_name_mobile_defineProperties(Constructor, staticProps); return Constructor; }
-
-function real_name_mobile_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
  * author: liuyang9
@@ -730,30 +785,11 @@ function real_name_mobile_defineProperty(obj, key, value) { if (key in obj) { Ob
 
 
 
-
 var real_name_mobile_store = configureStore();
 
 var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
   function RealNameMobile() {
     real_name_mobile_classCallCheck(this, RealNameMobile);
-
-    real_name_mobile_defineProperty(this, "show", function () {
-      real_name_mobile_store.dispatch({
-        type: UPDATE_GLOBAL_DATA,
-        data: {
-          show: true
-        }
-      });
-    });
-
-    real_name_mobile_defineProperty(this, "close", function () {
-      real_name_mobile_store.dispatch({
-        type: UPDATE_GLOBAL_DATA,
-        data: {
-          show: false
-        }
-      });
-    });
 
     this.init();
   }
@@ -769,9 +805,122 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
       document.getElementsByTagName('body')[0].append(this.modalRoot);
       real_name_mobile_renderApp(app);
     }
+  }, {
+    key: "show",
+    value: function show() {
+      real_name_mobile_store.dispatch({
+        type: UPDATE_POPUP_DATA,
+        data: {
+          show: true
+        }
+      });
+    }
+    /**
+     * 年龄小于8周岁的提示
+     */
+
+  }, {
+    key: "showEight",
+    value: function showEight() {
+      var _Config$pay$ageLessTh = config.pay.ageLessThanEight,
+          title = _Config$pay$ageLessTh.title,
+          subTitle = _Config$pay$ageLessTh.subTitle,
+          content = _Config$pay$ageLessTh.content;
+      real_name_mobile_updatePopupData({
+        show: true,
+        title: title,
+        subTitle: subTitle,
+        content: content
+      });
+    }
+    /**
+     * 8~16周岁不可充值，充值已达到上限的提示
+     */
+
+  }, {
+    key: "showSixteen",
+    value: function showSixteen() {
+      var _Config$pay$ageLessTh2 = config.pay.ageLessThanSixteen,
+          title = _Config$pay$ageLessTh2.title,
+          subTitle = _Config$pay$ageLessTh2.subTitle,
+          content = _Config$pay$ageLessTh2.content;
+      real_name_mobile_updatePopupData({
+        show: true,
+        title: title,
+        subTitle: subTitle,
+        content: content
+      });
+    }
+    /**
+     * 8~16周岁可充值，但充值金额达到上限的提示
+     * @param {*} amount 剩余可充值的额度
+     */
+
+  }, {
+    key: "showSixteenCharge",
+    value: function showSixteenCharge(amount) {
+      var _Config$pay$ageLessTh3 = config.pay.ageLessThanSixteenCharge,
+          title = _Config$pay$ageLessTh3.title,
+          subTitle = _Config$pay$ageLessTh3.subTitle,
+          content = _Config$pay$ageLessTh3.content;
+      real_name_mobile_updatePopupData({
+        show: true,
+        title: title,
+        subTitle: subTitle,
+        subTitle2: "\u8BE5\u6E38\u620F\u672C\u6708\u8FD8\u53EF\u5145\u503C".concat(amount, "\u5143"),
+        content: content
+      });
+    }
+    /**
+     * 8~16周岁不可充值，充值已达到上限的提示
+     */
+
+  }, {
+    key: "showEighteen",
+    value: function showEighteen() {
+      var _Config$pay$ageLessTh4 = config.pay.ageLessThanEighteen,
+          title = _Config$pay$ageLessTh4.title,
+          subTitle = _Config$pay$ageLessTh4.subTitle,
+          content = _Config$pay$ageLessTh4.content;
+      real_name_mobile_updatePopupData({
+        show: true,
+        title: title,
+        subTitle: subTitle,
+        content: content
+      });
+    }
+    /**
+     * 8~16周岁可充值，但充值金额已达到上限的提示
+     * @param {*} amount 
+     */
+
+  }, {
+    key: "showEighteenCharge",
+    value: function showEighteenCharge(amount) {
+      var _Config$pay$ageLessTh5 = config.pay.ageLessThanEighteenCharge,
+          title = _Config$pay$ageLessTh5.title,
+          subTitle = _Config$pay$ageLessTh5.subTitle,
+          content = _Config$pay$ageLessTh5.content;
+      real_name_mobile_updatePopupData({
+        show: true,
+        title: title,
+        subTitle: subTitle,
+        subTitle2: "\u8BE5\u6E38\u620F\u672C\u6708\u8FD8\u53EF\u5145\u503C".concat(amount, "\u5143")
+      });
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      real_name_mobile_store.dispatch({
+        type: UPDATE_POPUP_DATA,
+        data: {
+          show: false
+        }
+      });
+    }
   }], [{
-    key: "getInstance",
-    value: function getInstance() {
+    key: "Instance",
+    get: function get() {
       if (!this._instance) {
         this._instance = new RealNameMobile();
       }
@@ -785,8 +934,11 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
 
 
 
-var real_name_mobile_Test = function Test() {
-  return /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement(src_components_Modal, null, /*#__PURE__*/react_default.a.createElement("div", null, "test")));
+var real_name_mobile_updatePopupData = function updatePopupData(data) {
+  real_name_mobile_store.dispatch({
+    type: UPDATE_POPUP_DATA,
+    data: data
+  });
 };
 
 var real_name_mobile_renderApp = function renderApp(Component) {
@@ -796,74 +948,6 @@ var real_name_mobile_renderApp = function renderApp(Component) {
 };
 
 if (false) {}
-// CONCATENATED MODULE: ./src/real-name-mobile/config.js
-/**
- * author: liuyang9
- * description: 提示信息的相关配置
- */
-// 通知名称
-var NoticeName = '《关于防止未成年人沉迷网络游戏的通知》';
-var Config = {
-  // 支付相关提示信息的配置
-  pay: {
-    // 年龄小于8周岁的提示
-    ageLessThanEight: {
-      title: '根据相关部门对于未成年用户监管要求，该帐号不能充值游戏',
-      content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u7F51\u7EDC\u6E38\u620F\u4F01\u4E1A\u4E0D\u5F97\u4E3A\u672A\u6EE18\u5468\u5C81\u4EE5\u4E0B\u7528\u6237\u63D0\u4F9B\u6E38\u620F\u4ED8\u8D39\u670D\u52A1\u3002"),
-      style: {
-        height: '250px'
-      }
-    },
-    // 8-16周岁充值金额达到上限的提示
-    ageLessThanSixteen: {
-      title: '该月已累计充值金额已达到上限',
-      subTitle: '每个累积充值不能超过200元',
-      content: "\u6839\u636E".concat(NoticeName, "\uFF0C8-16\u5C81\u7528\u6237\u5355\u6B21\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC750\u5143\u4EBA\u6C11\u5E01\uFF0C\u6BCF\u6708\u5145\u503C\u91D1\u989D\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC7200\u5143\u4EBA\u6C11\u5E01\u3002"),
-      maskOpacity: '0.3',
-      style: {
-        height: '300px'
-      },
-      canClose: true
-    },
-    // 16-18周岁充值金额达到上限的提示
-    ageLessThanEighteen: {
-      title: '该月已累计充值金额已达到上限',
-      subTitle: '每个累积充值不能超过400元',
-      content: "\u6839\u636E".concat(NoticeName, "\uFF0C16-18\u5C81\u7528\u6237\u5355\u6B21\u5145\u503C\u91D1\u989D\u4E0D\u5F97\u8D85\u8FC7100\u5143\u4EBA\u6C11\u5E01\uFF0C\u6BCF\u6708\u5145\u503C\u91D1\u989D\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC7400\u5143\u4EBA\u6C11\u5E01\u3002"),
-      maskOpacity: '0.3',
-      style: {
-        height: '300px'
-      },
-      canClose: true
-    }
-  },
-  // 登录后相关提示信息的配置
-  login: {
-    // 登录后时长已达到上限的提示
-    gameTimeLimit: {
-      title: '您今日在该游戏时长已达到上限',
-      content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u672A\u6210\u5E74\u7528\u6237\u6CD5\u5B9A\u8282\u5047\u65E5\u6BCF\u65E5\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC73\u5C0F\u65F6\uFF0C\u5176\u5B83\u65F6\u95F4\u6BCF\u65E5\u4E0D\u5F97\u8D85\u8FC71.5\u5C0F\u65F6\u3002"),
-      style: {
-        width: '680px',
-        height: '250px'
-      }
-    }
-  },
-  // 游戏中相关提示信息的配置
-  play: {
-    // 游戏中时长已达到上限的提示
-    gameTimeLimit: {
-      title: '您今日在该游戏时长已达到上限',
-      subTitle: '30秒后将返回登录页',
-      content: "\u6839\u636E".concat(NoticeName, "\uFF0C\u672A\u6210\u5E74\u7528\u6237\u6CD5\u5B9A\u8282\u5047\u65E5\u6BCF\u65E5\u7D2F\u8BA1\u4E0D\u5F97\u8D85\u8FC73\u5C0F\u65F6\uFF0C\u5176\u5B83\u65F6\u95F4\u6BCF\u65E5\u4E0D\u5F97\u8D85\u8FC71.5\u5C0F\u65F6\u3002"),
-      style: {
-        width: '680px',
-        height: '300px'
-      }
-    }
-  }
-};
-/* harmony default export */ var config = (Config);
 // CONCATENATED MODULE: ./src/index.js
 function src_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -883,7 +967,7 @@ var src_RealNameMobileSdk = /*#__PURE__*/function () {
     src_classCallCheck(this, RealNameMobileSdk);
 
     if (!RealNameMobileSdk._instance) {
-      RealNameMobileSdk._instance = real_name_mobile_RealNameMobile.getInstance();
+      RealNameMobileSdk._instance = real_name_mobile_RealNameMobile.Instance;
     }
 
     return RealNameMobileSdk._instance;
@@ -894,10 +978,10 @@ var src_RealNameMobileSdk = /*#__PURE__*/function () {
 
 
   src_createClass(RealNameMobileSdk, null, [{
-    key: "getInstance",
-    value: function getInstance() {
+    key: "Instance",
+    get: function get() {
       if (!this._instance) {
-        this._instance = real_name_mobile_RealNameMobile.getInstance();
+        this._instance = real_name_mobile_RealNameMobile.Instance;
       }
 
       return this._instance;
@@ -907,8 +991,8 @@ var src_RealNameMobileSdk = /*#__PURE__*/function () {
      */
 
   }, {
-    key: "getConfig",
-    value: function getConfig() {
+    key: "Config",
+    get: function get() {
       return config;
     }
   }]);

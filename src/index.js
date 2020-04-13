@@ -9,7 +9,7 @@ import Config from './real-name-mobile/config';
 export default class RealNameMobileSdk {
   constructor() {
     if (!RealNameMobileSdk._instance) {
-      RealNameMobileSdk._instance = RealNameMobile.getInstance();
+      RealNameMobileSdk._instance = RealNameMobile.Instance;
     }
 
     return RealNameMobileSdk._instance;
@@ -18,9 +18,9 @@ export default class RealNameMobileSdk {
   /**
    * 获取单例
    */
-  static getInstance() {
+  static get Instance() {
     if (!this._instance) {
-      this._instance = RealNameMobile.getInstance();
+      this._instance = RealNameMobile.Instance;
     }
 
     return this._instance;
@@ -29,7 +29,7 @@ export default class RealNameMobileSdk {
   /**
    * 获取相关提示信息的配置
    */
-  static getConfig() {
+  static get Config() {
     return Config;
   }
 }
