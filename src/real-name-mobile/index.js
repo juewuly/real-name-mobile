@@ -76,21 +76,19 @@ export default class RealNameMobile {
 
   /**
    * 8~16周岁可充值，但充值金额达到上限的提示
-   * @param {*} amount 剩余可充值的额度
    */
-  showSixteenCharge(amount) {
+  showSixteenCharge() {
     const { title, subTitle, content } = Config.pay.ageLessThanSixteenCharge;
     setPopupData({
       show: true,
       title,
       subTitle,
-      subTitle2: `该游戏本月还可充值${amount}元`,
       content
     });    
   }
 
   /**
-   * 8~16周岁不可充值，充值已达到上限的提示
+   * 16~18周岁不可充值，充值已达到上限的提示
    */
   showEighteen() {
     const { title, subTitle, content } = Config.pay.ageLessThanEighteen;
@@ -103,16 +101,14 @@ export default class RealNameMobile {
   }
 
   /**
-   * 8~16周岁可充值，但充值金额已达到上限的提示
-   * @param {*} amount 
+   * 16~18周岁可充值，但充值金额已达到上限的提示
    */
-  showEighteenCharge(amount) {
+  showEighteenCharge() {
     const { title, subTitle, content } = Config.pay.ageLessThanEighteenCharge;
     setPopupData({
       show: true,
       title,
       subTitle,
-      subTitle2: `该游戏本月还可充值${amount}元`,
       content
     });
   }
@@ -126,7 +122,8 @@ export default class RealNameMobile {
       show: true,
       title,
       content,
-      canClose: false
+      canClose: false,
+      noMask: true
     });
   }
 
@@ -140,7 +137,8 @@ export default class RealNameMobile {
       title,
       subTitle,
       content,
-      canClose: false
+      canClose: false,
+      noMask: true
     })
   }
 

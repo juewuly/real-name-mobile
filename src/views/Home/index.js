@@ -25,14 +25,14 @@ class Home extends Component {
   }
 
   render() {
-    const { show, title, subTitle, subTitle2, content, canClose } = this.props;
+    const { show, title, subTitle, subTitle2, content, canClose, noMask } = this.props;
 
     if (!show) {
       return null;
     }
 
     return (
-      <Modal>
+      <Modal noMask={noMask}>
         <Tip
           title={title}
           subTitle={subTitle}
@@ -51,7 +51,8 @@ const mapStateToProps = state => ({
   subTitle: state.getIn(['data', 'popup', 'subTitle']),
   subTitle2: state.getIn(['data', 'popup', 'subTitle2']),
   content: state.getIn(['data', 'popup', 'content']),
-  canClose: state.getIn(['data', 'popup', 'canClose'])
+  canClose: state.getIn(['data', 'popup', 'canClose']),
+  noMask: state.getIn(['data', 'popup', 'noMask'])
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -59,5 +60,9 @@ const mapDispatchToProps = dispatch => ({
     updatePopupData
   }, dispatch)
 });
+
+Home.defaultProps = {
+  noMask: false
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

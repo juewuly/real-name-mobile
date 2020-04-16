@@ -688,13 +688,16 @@ var Home_Home = /*#__PURE__*/function (_Component) {
           subTitle = _this$props.subTitle,
           subTitle2 = _this$props.subTitle2,
           content = _this$props.content,
-          canClose = _this$props.canClose;
+          canClose = _this$props.canClose,
+          noMask = _this$props.noMask;
 
       if (!show) {
         return null;
       }
 
-      return /*#__PURE__*/react_default.a.createElement(src_components_Modal, null, /*#__PURE__*/react_default.a.createElement(src_components_Tip, {
+      return /*#__PURE__*/react_default.a.createElement(src_components_Modal, {
+        noMask: noMask
+      }, /*#__PURE__*/react_default.a.createElement(src_components_Tip, {
         title: title,
         subTitle: subTitle,
         subTitle2: subTitle2,
@@ -715,7 +718,8 @@ var mapStateToProps = function mapStateToProps(state) {
     subTitle: state.getIn(['data', 'popup', 'subTitle']),
     subTitle2: state.getIn(['data', 'popup', 'subTitle2']),
     content: state.getIn(['data', 'popup', 'content']),
-    canClose: state.getIn(['data', 'popup', 'canClose'])
+    canClose: state.getIn(['data', 'popup', 'canClose']),
+    noMask: state.getIn(['data', 'popup', 'noMask'])
   };
 };
 
@@ -727,6 +731,9 @@ var Home_mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
+Home_Home.defaultProps = {
+  noMask: false
+};
 /* harmony default export */ var src_views_Home = (Object(lib["connect"])(mapStateToProps, Home_mapDispatchToProps)(Home_Home));
 // CONCATENATED MODULE: ./src/views/index.js
 
@@ -887,12 +894,11 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
     }
     /**
      * 8~16周岁可充值，但充值金额达到上限的提示
-     * @param {*} amount 剩余可充值的额度
      */
 
   }, {
     key: "showSixteenCharge",
-    value: function showSixteenCharge(amount) {
+    value: function showSixteenCharge() {
       var _Config$pay$ageLessTh3 = config.pay.ageLessThanSixteenCharge,
           title = _Config$pay$ageLessTh3.title,
           subTitle = _Config$pay$ageLessTh3.subTitle,
@@ -901,12 +907,11 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
         show: true,
         title: title,
         subTitle: subTitle,
-        subTitle2: "\u8BE5\u6E38\u620F\u672C\u6708\u8FD8\u53EF\u5145\u503C".concat(amount, "\u5143"),
         content: content
       });
     }
     /**
-     * 8~16周岁不可充值，充值已达到上限的提示
+     * 16~18周岁不可充值，充值已达到上限的提示
      */
 
   }, {
@@ -924,13 +929,12 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
       });
     }
     /**
-     * 8~16周岁可充值，但充值金额已达到上限的提示
-     * @param {*} amount 
+     * 16~18周岁可充值，但充值金额已达到上限的提示
      */
 
   }, {
     key: "showEighteenCharge",
-    value: function showEighteenCharge(amount) {
+    value: function showEighteenCharge() {
       var _Config$pay$ageLessTh5 = config.pay.ageLessThanEighteenCharge,
           title = _Config$pay$ageLessTh5.title,
           subTitle = _Config$pay$ageLessTh5.subTitle,
@@ -939,7 +943,6 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
         show: true,
         title: title,
         subTitle: subTitle,
-        subTitle2: "\u8BE5\u6E38\u620F\u672C\u6708\u8FD8\u53EF\u5145\u503C".concat(amount, "\u5143"),
         content: content
       });
     }
@@ -957,7 +960,8 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
         show: true,
         title: title,
         content: content,
-        canClose: false
+        canClose: false,
+        noMask: true
       });
     }
     /**
@@ -976,7 +980,8 @@ var real_name_mobile_RealNameMobile = /*#__PURE__*/function () {
         title: title,
         subTitle: subTitle,
         content: content,
-        canClose: false
+        canClose: false,
+        noMask: true
       });
     }
   }, {

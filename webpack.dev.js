@@ -81,9 +81,12 @@ module.exports = {
     // 在模块中添加 src, 当导入文件时，可以将 src 作为相关路径
     modules: ['src', 'node_modules']
   },
+  
   devServer: {
-    contentBase: './dist',
+    port: 3000,
     hot: true,
+    contentBase: './dist',
+    disableHostCheck: true
   },
   devtool: 'inline-source-map'
 }
