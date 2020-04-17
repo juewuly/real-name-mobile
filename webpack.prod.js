@@ -26,15 +26,15 @@ module.exports = {
         }
       })
     ],
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
-        }
-      }
-    }
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all'
+    //     }
+    //   }
+    // }
   },
   module: {
     rules: [
