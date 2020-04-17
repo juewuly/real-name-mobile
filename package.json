@@ -8,7 +8,14 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.dev.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:juewuly/real-name-mobile.git"
+  },
+  "keywords": [
+    "real-name-mobile",
+    "real-name"
+  ],
   "author": "liuyang9",
   "license": "ISC",
   "devDependencies": {
